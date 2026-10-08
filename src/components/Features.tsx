@@ -9,6 +9,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
+import type { CSSProperties } from 'react'
 
 const features = [
   {
@@ -193,7 +194,8 @@ function Features() {
   return (
     <section
       id="recursos"
-      className="relative isolate scroll-mt-24 overflow-hidden px-6 py-28 lg:px-10 lg:py-36"
+      aria-labelledby="recursos-titulo"
+      className="relative isolate scroll-mt-24 overflow-hidden px-4 py-20 min-[390px]:px-5 sm:px-6 sm:py-28 lg:px-10 lg:py-36"
     >
       {/* Iluminação ambiente */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -231,7 +233,7 @@ function Features() {
             Tudo conectado à sua rotina
           </div>
 
-          <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 id="recursos-titulo" className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             Tudo o que você precisa para{' '}
             <span className="text-gradient">evoluir.</span>
           </h2>
@@ -273,7 +275,7 @@ function Features() {
                 }`}
                 style={{
                   '--card-glow': feature.glow,
-                } as React.CSSProperties}
+                } as CSSProperties}
               >
                 {/* Gradiente interno */}
                 <div
